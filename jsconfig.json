@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "checkJs": false,
+    "jsx": "react",
+    "baseUrl": "src",
+    "rootDir": ".",
+    "alwaysStrict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitAny": false,
+    "module": "commonjs"
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "**/.test.(js|jsx)"
+  ]
+}

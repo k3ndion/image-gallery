@@ -1,0 +1,74 @@
+{
+  "name": "gallery",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "^4.2.0",
+    "@material-ui/icons": "^4.2.1",
+    "classnames": "^2.2.6",
+    "font-awesome": "^4.7.0",
+    "line-awesome": "^1.0.2",
+    "localforage": "^1.7.3",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-hooks-fetch": "^0.10.0",
+    "react-redux": "^7.1.0",
+    "react-router-dom": "^4.4.0-beta.8",
+    "react-scripts": "^3.0.1",
+    "react-toastify": "^5.3.1",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-persist": "^5.10.0",
+    "redux-thunk": "^2.3.0",
+    "tinycolor2": "^1.4.1"
+  },
+  "devDependencies": {
+    "@types/otplib": "^7.0.0",
+    "@types/react-redux": "^7.0.1",
+    "@types/styled-components": "^4.1.10",
+    "cra-append-sw": "^2.6.1",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.9.1",
+    "eslint-plugin-import": "^2.16.0",
+    "jest-junit": "^6.3.0",
+    "react-test-renderer": "^16.8.3",
+    "redux-mock-store": "^1.5.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "prebuild": "cra-append-sw -s ./src/service-worker/custom-service-worker.js",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=node",
+    "build-test-report": "npm test -- --coverage --reporters=default --reporters=jest-junit",
+    "eject": "react-scripts eject",
+    "lint": "eslint src/**/*.{js,jsx}"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "jest": {
+    "coverageReporters": [
+      "cobertura"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}",
+      "!src/**/*.d.ts",
+      "!<rootDir>/node_modules/"
+    ]
+  },
+  "jest-junit": {
+    "outputDirectory": "./coverage",
+    "outputName": "junit.xml"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
